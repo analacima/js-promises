@@ -14,7 +14,7 @@ async function peticionAsyncAwait(){
           const[response1, response2, response3]=await Promise.all([
             fetch(CATEGORIES_URL),
             fetch(DISHES_URL),
-            fetch(RESTAURANTS_URL
+            fetch(RESTAURANTS_URL)
           ])
           const[categories, dishes, restaurants]=await Promise.all([
             response1.json(),

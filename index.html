@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <!-- definitimos un botón para recibir datos de forma asíncrona -->
-    <button id="btn">Enviar</button>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- definimos un botón para recibir datos de forma asíncrona -->
+    <button class= "btn btn-primary" id="btn">Enviar</button>
     <!-- definimos un div para mostrar los datos que recibimos -->
     <div id="datos"></div>
     <!-- definimos un script para hacer la petición asíncrona -->
-    <script src="scriptRestaurante.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scriptFakeServer.js"></script>
+  </body>
 </html>
