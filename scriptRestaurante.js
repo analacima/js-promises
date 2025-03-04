@@ -11,13 +11,18 @@ let dishes, categories, restaurants
    
 async function peticionAsyncAwait(){
         try{
-            const response1=await fetch(CATEGORIES_URL);
-            const categories=await response1.json();
-            const response2=await fetch(DISHES_URL);
-            const dishes=await response2.json();
-            const response3=await fetch(RESTAURANTS_URL);
-            const restaurants=await response3.json();
-            mostrarPlatos(categories, dishes, restaurants); 
+          const[response1, response2, response3]=await Promise.all([
+            fetch(CATEGORIES_URL),
+            fetch(DISHES_URL),
+            fetch(RESTAURANTS_URL
+          ])
+          const[categories, dishes, restaurants]=await Promise.all([
+            response1.json(),
+            response2.json(),
+            response3.json()
+          ])
+
+          mostrarPlatos(categories, dishes, restaurants); 
         }catch(error){
             console.log(error);
         }
